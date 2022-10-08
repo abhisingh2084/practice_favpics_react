@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDom from 'react-dom'
+import './index.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const heading = "My favorate pics lists"
+const image1 = "https://picsum.photos/200/300"
+const image2 = "https://picsum.photos/200/300/?blur"
+const image3 = "https://picsum.photos/seed/picsum/200/300"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDom.render(
+  <>
+   <h1 className='headings'>{heading}</h1>
+   <div className='pics'>
+   <img src = {image1}/>
+   <img src = {image2}/>
+   <img src = {image3}/>
+   </div>
+  </>,
+  document.getElementById("root")
+)
